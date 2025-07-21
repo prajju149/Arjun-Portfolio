@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjun Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+  <header class="hero-header">
+    <nav class="main-nav">
+      <button class="hamburger" id="hamburger-btn" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href ="new.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
+      <span class="logo">Arjun's Port<span class="accent">folio</span></span>
+      <ul>
+        <li><a href="new.html">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-switcher" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+        <a href="Arjun_Resume.pdf" class="download-cv" download>Download Resume <span>⬇️</span></a>
+      </div>
+    </nav>
+    
+       
+  </header>
+
+    <section id="contact" class="contact-section">
+
+  <!-- Left side profile section -->
+  <div class="profile-left">
+    <img src="contact1.png" alt="Contact Image">
+  </div>
+
+  <!-- Right side form -->
+  <div class="Contact Me contact-right">
+    <h2 class="contact-title">Contact Me</h2>
+    <form class="contact-form" id="contactForm">
+      <div class="form-title">Get in Touch   </div>
+      <p class="form-desc">Please fill out the form below to get in touch with us. We will respond as soon as possible.</p>
+
+      <div class="form-group">
+        <i class="fa fa-user"></i>
+        <input type="text" placeholder=" " id="name" required>
+        <label>Name</label>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" placeholder=" " id="email" required>
+        <label>Email</label>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-phone"></i>
+        <input type="text" placeholder=" " id="contact" required>
+        <label>Contact</label>
+      </div>
+
+      <div class="form-group">
+        <i class="fa fa-comment"></i>
+        <textarea rows="4" placeholder=" " id="query" required></textarea>
+        <label>Query</label>
+      </div>
+        
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<div class="toast" id="toast">✅ Message Sent Successfully!</div>
+
+  <footer class="animated-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href ="new.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
+        <h2>Design With Arjun</h2>
+        <h3>Where Ideas take shape</h3>
+        <p>
+          This is a place where creativity meets technology and It is straightforward and clearly states the purpose of the website.
+        </p>
+        <div class="footer-social">
+          <a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72"><img src="yt1.png" alt="YouTube"></a>
+          <a href="https://www.linkedin.com/in/arjun-kumar59264/"><img src="link.png" alt="LinkedIn"></a>
+          <a href="https://github.com/prajju149"><img src="github-65-512.png" alt="GitHub"></a>
+          <a href="https://www.instagram.com/arjun_m0368?igsh=eGE3YWM2Z3g4OHN1"><img src="instagram.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com/share/16t6ktBwCM/"><img src="fb.png" alt="Facebook"></a>
+          <a href="mailto:aksir648@gmail.com"><img src="mail.png" alt="Email"></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          &nbsp;
+          &nbsp;&nbsp;&nbsp;
+          <li><a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72">Blog</a></li> &nbsp;
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="t&c.html">Terms & Conditions</a></li> &nbsp;
+          <li><a href="#contact">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Me At</h3>
+        <ul>
+          <li><a href="tel:+916386416463"><span class="footer-icon">📞</span> +91-6386416463</a></li>
+          <li><a href="mailto:aksir648@gmail.com"><span class="footer-icon">✉️</span> aksir648@gmail.com</a></li>
+          <li><a href=""><span class="footer-icon">📍</span>
+            Ansal Plaza, Greater Noida Express Way, Knowledge Park 1-Greater Noida (Near Tugalpur, Near Institutional Area, Pari Chowk)<br>
+            Pari Chock, Greater Noida, UP, INDIA 201306
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Design with Arjun <span class="footer-heart">❤</span> by arjunvision. All rights reserved.</span>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
