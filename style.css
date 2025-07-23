@@ -1,4 +1,4 @@
-    :root {
+:root {
       --primary-bg: rgb(0, 0, 33);
       --secondary-bg: rgb(0, 0, 50);
       --text-color: white;
@@ -17,7 +17,6 @@
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
     }
-    
     header, section, footer {
       background-color: var(--secondary-bg);
       transition: background 0.6s;
@@ -27,25 +26,6 @@
       color: var(--accent);
       transition: color 0.3s;
     }
-    .logo-container {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.header-logo {
-  width: 20px;
-  height: 50px;
-  border-radius: 50%; /* optional for circular logo */
-  object-fit: cover;
-}
-
-.logo-text {
-  color: var(--accent-color);
-  font-size: 1rem;
-  margin: 10px;
-}
-
     /* Header/Hero */
     .hero-header {
       background: linear-gradient(120deg, #0a183d 0%, #1a2956 100%);
@@ -199,6 +179,8 @@
 
     }
 
+    
+
     .profile-visual {
       position: relative;
       width: 320px;
@@ -268,7 +250,7 @@
       font-size: 1.08em;
     }
     .hero-social {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .hero-social a {
       display: inline-block;
@@ -277,17 +259,17 @@
     }
     .hero-social a:hover {
       transform: scale(1.15);
-      transform: rotate(-17deg);
-    
+      transform: rotate(-15deg);
+      
     }
     .hero-social img {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       filter: brightness(0) invert(1);
     }
     .hero-buttons {
       display: flex;
-      gap: 19px;
+      gap: 18px;
     }
     .btn {
       padding: 10px 28px;
@@ -624,6 +606,7 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      
     }
 
     .profile-left {
@@ -788,7 +771,7 @@
       margin: 0 auto;
       padding: 0 40px;
       gap: 32px;
-      animation: fadeInUpFooter 1.2s;
+      animation: fadeInUpFooter 1.5s;
     }
     @keyframes fadeInUpFooter {
       from { opacity: 0; transform: translateY(40px);}
@@ -798,7 +781,7 @@
       flex: 1 1 320px;
       min-width: 260px;
       margin-bottom: 24px;
-      animation: glowFooter 2.5s infinite alternate;
+      animation: glowFooter 3.5s infinite alternate;
 
       border-radius: 40px 40px 40 40;
       padding: 24px;
@@ -816,6 +799,14 @@
       margin-bottom: 16px;
       background: #fff;
       box-shadow: 0 2px 12px #00c6ff44;
+      
+    }
+    .footer-logo:hover {
+      transform: rotate(360deg);
+      transition: transform 0.6s;
+        transform: translateY(-10px);
+  border: 2px solid #99cfcf;
+  box-shadow: 0 0 20px #84ba89, 0 0 30px #09d8d833;
     }
     .footer-brand h2 {
       font-size: 1.5em;
@@ -832,75 +823,8 @@
       transition: transform 0.3s;
     }
     .footer-social a:hover {
-      transform: scale(1.2) rotate(-8deg);
-    }
-    .footer-social img {
-      width: 32px;
-      height: 32px;
-      filter: brightness(0) invert(1);
-    }
-    .footer-links, .footer-contact {
-      flex: 1 1 180px;
-      min-width: 160px;
-      margin-bottom: 24px;
-    }
-    .footer-links h3, .footer-contact h3 {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .footer-links ul, .footer-contact ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .footer-links ul li, .footer-contact ul li {
-      margin-bottom: 10px;
-      color: #aab3c0;
-      transition: color 0.3s;
-    }
-    .footer-links ul li a {
-      color: #10284a;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-links ul li a:hover {
-      color: #95b5e2;
-    }
-    .footer-icon {
-      margin-right: 8px;
-      font-size: 1.1em;
-    }
-    .footer-bottom {
-      border-top: 1px solid #22345a;
-      text-align: center;
-      padding: 18px 0 12px 0;
-      color: #b3c6e0;
-      font-size: 1em;
-      margin-top: 24px;
-      animation: fadeInFooterBottom 1.8s;
-    }
-    .footer-heart {
-      color: #ff3e9d;
-      animation: pulseHeart 1.2s infinite;
-    }
-    @keyframes pulseHeart {
-      0%, 100% { transform: scale(1);}
-      50% { transform: scale(1.2);}
-    }
-    @keyframes fadeInFooterBottom {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @media (max-width: 900px) {
-      .footer-container {
-        flex-direction: column;
-        gap: 0;
-        padding: 0 18px;
-      }
-      .footer-brand, .footer-links, .footer-contact {
-        margin-bottom: 24px;
-      }
+      transform: scale(1.2) rotate(-13deg);
+      
     }
     .privacy-policy-section {
   background-color: var(--secondary-bg);
@@ -962,4 +886,299 @@
 .terms-section .container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+    .footer-social img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) invert(1);
+    }
+    .footer-links, .footer-contact {
+      flex: 1 1 180px;
+      min-width: 160px;
+      margin-bottom: 24px;
+      transform: rotate(360deg);
+      transition: transform 0.6s;
+      transform: translateY(-10px);
+    }
+    .footer-links h3, .footer-contact h3 {
+      font-size: 1.2em;
+      color: #00c6ff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .footer-links ul, .footer-contact ul {
+      color: #0f0e0e;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1em;
+      line-height: 1.6;
+      
+      
+    }
+    .footer-contact {
+  color: #000000;            /* Dark text for better visibility */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.footer-contact a {
+  color: #1d1f20;            /* Bright blue link */
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+  color: #212b27;           /* Lighter blue on hover */
+}
+
+    .footer-links ul li, .footer-contact ul li {
+      margin-bottom: 10px;
+      color: #6c6ccc;
+      font-weight: 500;
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+    .footer-links ul li a {
+      color: #141516;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links ul li a:hover {
+      color: #15f4ad;
+    }
+    .footer-icon {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+    .footer-bottom {
+      border-top: 1px solid #22345a;
+      text-align: center;
+      padding: 18px 0 12px 0;
+      color: #b3c6e0;
+      font-size: 1em;
+      margin-top: 24px;
+      animation: fadeInFooterBottom 1.8s;
+    }
+    .footer-heart {
+      color: #e6d0db;
+      animation: pulseHeart 1.2s infinite;
+    }
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1);}
+      50% { transform: scale(1.2);}
+    }
+    @keyframes fadeInFooterBottom {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @media (max-width: 900px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 1;
+        padding: 0 18px;
+      }
+      .footer-brand, .footer-links, .footer-contact {
+        margin-bottom: 30px;
+      }
+    }
+    
+
+    /* Form Container */
+.subscribe-form {
+  
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 30px;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease forwards;
+  transform: translateY(60px);
+  opacity: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #5d6d74;
+  border: 2px solid #85b6bb;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem auto;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+  box-shadow: 0 0 30px rgba(0, 198, 255, 0.2);
+  backdrop-filter: blur(10px);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 2.5rem;
+  font-size: 2.1rem;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.input-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.input-group.delay {
+  animation-delay: 0.3s;
+}
+
+/* Input and Textarea Styles */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1.3rem;
+  background: transparent;
+  border: 2px solid #00e5ff;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 2.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  
+}
+
+/* Floating Label Styles */
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 1.3rem;
+  transform: translateY(-50%);
+  background: transparent;
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-weight: 500;
+  z-index: 1;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.9rem;
+  line-height: 1.5;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #00e5ff;
+  border: #000000;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 20px;
+  font-size: 1.9rem;
+  background-color: #0f2027;
+  color: #00e5ff;
+  padding: 0 5px;
+  box-shadow: 0 0 5px rgba(0, 198, 255, 0.5);
+  transform: translateY(0);
+  
+  transition: all 0.3s ease;
+
+}
+.subscribe-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #aad7cc;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* Animated Submit Button */
+.animated-button {
+
+  width: 100%;
+  padding: 1.2rem;
+  background: linear-gradient(270deg, #00e5ff, #00c3ff, #00e5ff);
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 50px;
+  color: #000;
+  font-size: 2.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  animation: gradientShift 5s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.animated-button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 0 25px #00e5ff;
+  color: antiquewhite;
+  background-color: #0077ff;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gradient Shift for Button */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .subscribe-form {
+    padding: 2rem;
+  }
+  .animated-button {
+    font-size: 1rem;
+  }
 }
