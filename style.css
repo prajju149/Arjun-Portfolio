@@ -32,18 +32,48 @@
       padding-bottom: 108px;
       border-radius: 0 0 40px 40px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+      animation: slideLeft 1.2s ease-in-out;
     }
+    
+
+@keyframes glowBar {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideTop {
+  0%  { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+@keyframes slideRight {
+  0%  { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes slideBottom {
+  0%  { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+ 
     .main-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 28px 40px 0 40px;
+      animation: slideBottom 1.2s ease-in-out;
     }
+    
     .logo {
       font-size: 2em;
       font-weight: bold;
       color: #fff;
       letter-spacing: 1px;
+      animation: slideRight 1.2s ease-in-out; 
+      animation-fill-mode: forwards;
+      text-decoration: none;
+      transition: color 0.3s;
+
     }
     .logo .accent {
       color: var(--accent);
@@ -63,10 +93,36 @@
       font-weight: 500;
       transition: color 0.3s;
     }
+    
     .main-nav ul li a:hover {
       
       color: #080a10;
     }
+    nav.main-nav ul li {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideInNav 0.6s ease-out forwards;
+}
+
+/* Optional: delay each item slightly for staggered effect */
+nav.main-nav ul li:nth-child(1) { animation-delay: 0.2s; }
+nav.main-nav ul li:nth-child(2) { animation-delay: 0.4s; }
+nav.main-nav ul li:nth-child(3) { animation-delay: 0.6s; }
+nav.main-nav ul li:nth-child(4) { animation-delay: 0.8s; }
+nav.main-nav ul li:nth-child(5) { animation-delay: 1s; }
+
+
+@keyframes slideInNav {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
     .nav-actions {
       display: flex;
       align-items: center;
@@ -1181,4 +1237,17 @@
   .animated-button {
     font-size: 1rem;
   }
+}
+
+.role-typing {
+  border-right: 2px solid orange;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
 }
