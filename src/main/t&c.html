@@ -6,29 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arjun Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- AOS Library CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <header class="hero-header">
-    <nav class="main-nav">
-      <button class="hamburger" id="hamburger-btn" aria-label="Open Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a href ="new.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
-      <span class="logo">Arjun's Port<span class="accent">folio</span></span>
-      <ul>
-        <li><a href="new.html">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="theme-switcher" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
-        <a href="Arjun_Resume.pdf" class="download-cv" download>Download Resume <span>⬇️</span></a>
-      </div>
-    </nav>
-    
+
+ <header class="hero-header" data-aos="fade-down">
+  <div class="top-slide-banner"></div>
+
+  <!-- Navigation -->
+  <nav class="main-nav" data-aos="fade-down" data-aos-delay="100">
+    <button class="hamburger" id="hamburger-btn" aria-label="Open Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a href="index.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
+    <span class="logo">Arjun's Port<span class="accent">folio</span></span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-switcher" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+      <a href="Arjun_Resume.pdf" class="download-cv" download>Download Resume <span>⬇️</span></a>
+    </div>
+  </nav>
        
   </header>
 <section class="terms-section" id="terms">
@@ -83,62 +89,91 @@
   </div>
 </section>
 
+ <footer class="animated-footer" data-aos="fade-up">
+  <div class="footer-container">
 
-
-  <footer class="animated-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <a href ="new.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
-        <h2>Design With Arjun</h2>
-        <h3>Where Ideas take shape</h3>
-        <p>
-          This is a place where creativity meets technology and It is straightforward and clearly states the purpose of the website.
-        </p>
-        <div class="footer-social">
-          <a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72"><img src="yt1.png" alt="YouTube"></a>
-          <a href="https://www.linkedin.com/in/arjun-kumar59264/"><img src="link.png" alt="LinkedIn"></a>
-          <a href="https://github.com/prajju149"><img src="github-65-512.png" alt="GitHub"></a>
-          <a href="https://www.instagram.com/arjun_m0368?igsh=eGE3YWM2Z3g4OHN1"><img src="instagram.png" alt="Instagram"></a>
-          <a href="https://www.facebook.com/share/16t6ktBwCM/"><img src="fb.png" alt="Facebook"></a>
-          <a href="mailto:aksir648@gmail.com"><img src="mail.png" alt="Email"></a>
-        </div>
-      </div>
-      <div class="footer-links">
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          &nbsp;
-          &nbsp;&nbsp;&nbsp;
-          <li><a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72">Blog</a></li> &nbsp;
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li> &nbsp;
-          <li><a href="#contact">Support</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Me At</h3>
-        <ul>
-          <li><a href="tel:+916386416463"><span class="footer-icon">📞</span> +91-6386416463</a></li>
-          <li><a href="mailto:aksir648@gmail.com"><span class="footer-icon">✉️</span> aksir648@gmail.com</a></li>
-          <li><a href=""><span class="footer-icon">📍</span>
-            Ansal Plaza, Greater Noida Express Way, Knowledge Park 1-Greater Noida (Near Tugalpur, Near Institutional Area, Pari Chowk)<br>
-            Pari Chock, Greater Noida, UP, INDIA 201306
-          </a></li>
-        </ul>
+    <!-- Brand Section -->
+    <div class="footer-brand" data-aos="fade-right" data-aos-delay="100">
+      <a href="index.html"><img src="logo.jpg" alt="Logo" class="footer-logo"></a>
+      <h2>Design With Arjun</h2>
+      <h3>Where Ideas take shape</h3>
+      <p>
+        This is a place where creativity meets technology and It is straightforward and clearly states the purpose of the website.
+      </p>
+      <div class="footer-social" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72"><img src="yt1.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/in/arjun-kumar59264/"><img src="link.png" alt="LinkedIn"></a>
+        <a href="https://github.com/prajju149"><img src="github-65-512.png" alt="GitHub"></a>
+        <a href="https://www.instagram.com/arjun_m0368?igsh=eGE3YWM2Z3g4OHN1"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/share/16t6ktBwCM/"><img src="fb.png" alt="Facebook"></a>
+        <a href="mailto:aksir648@gmail.com"><img src="mail.png" alt="Email"></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 Design with Arjun <span class="footer-heart">❤</span> by arjunvision. All rights reserved.</span>
-    </div>
-  </footer>
 
-<script src="script.js"></script>
+    <!-- Explore Links -->
+    <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72">Blog</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="footer-links" data-aos="fade-up" data-aos-delay="250">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="t&c.html">Terms & Conditions</a></li>
+        <li><a href="contact.html">Support</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact" data-aos="fade-left" data-aos-delay="300">
+      <h3>Contact Me At</h3>
+      <ul>
+        <li><a href="tel:+916386416463">📞 +91-6386416463</a></li>
+        <li><a href="mailto:aksir648@gmail.com">✉️ aksir648@gmail.com</a></li>
+        <li>
+          <a href="https://www.google.com/maps/place/LB-01+,Basement+-1,+ANSAL+PLAZA+MALL+SHOPPING+COMPLEX,+Amit+Nagar,+Sadarpur,+Greater+Noida,+Uttar+Pradesh+201310/@28.4641428,77.506755,350m">
+            📍 Ansal Plaza, Greater Noida Express Way, Knowledge Park 1-Greater Noida (Near Tugalpur, Near Institutional Area, Pari Chowk)
+            <br>Pari Chock, Greater Noida, UP, INDIA 201306
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Subscribe Section -->
+  <div class="subscribe-section" data-aos="zoom-in-up" data-aos-delay="350">
+    <h3 class="subscribe-heading">Subscribe for Updates</h3>
+    <form action="https://formspree.io/f/xldljojn" method="POST" class="subscribe-form" id="subscribeForm">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+    <span>&copy; 2025 Design with Arjun <span class="footer-heart">❤</span> by arjunvision. All rights reserved.</span>
+  </div>
+</footer>
+
+  <div class="back-to-top" id="backToTop"> <i class="fa fa-arrow-up"></i>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 
 </body>
 </html>
