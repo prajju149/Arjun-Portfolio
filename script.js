@@ -1,14 +1,17 @@
-  // Add before
-    
-  const hamburger = document.getElementById('hamburger-btn');
-  const navList = document.querySelector('.main-nav ul');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navList.classList.toggle('open');
-
+    // Add before
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navUl = document.querySelector('.main-nav ul');
+hamburgerBtn.addEventListener('click', function() {
+  hamburgerBtn.classList.toggle('active');
+  navUl.classList.toggle('open');
+});
+// Optional: close menu on link click (mobile)
+navUl.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('active');
+    navUl.classList.remove('open');
   });
-
+});
     
     // Typing animation for role
     const roles = ["Web Developer", "Problem Solver ", "Open Source Contributor"];
