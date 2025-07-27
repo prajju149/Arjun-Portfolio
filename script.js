@@ -1,5 +1,37 @@
-    // Add before
-const hamburgerBtn = document.getElementById('hamburger-btn');
+
+
+var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+
+  const hamburgerBtn = document.getElementById('hamburger-btn');
 const navUl = document.querySelector('.main-nav ul');
 hamburgerBtn.addEventListener('click', function() {
   hamburgerBtn.classList.toggle('active');
@@ -82,3 +114,32 @@ navUl.querySelectorAll('a').forEach(link => {
         }
       }
     });
+
+    
+  const roles = ["Web Developer", "UI Designer", "Freelancer", "Full Stack Learner"];
+  const typingElement = document.querySelector(".role-typing");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentRole = roles[roleIndex];
+    if (isDeleting) {
+      typingElement.textContent = currentRole.substring(0, charIndex--);
+    } else {
+      typingElement.textContent = currentRole.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000); // Pause before deleting
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, 300); // Pause before typing next
+    } else {
+      setTimeout(typeEffect, isDeleting ? 50 : 100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
