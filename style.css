@@ -291,16 +291,22 @@ nav.main-nav ul li:nth-child(5) { animation-delay: 1s; }
     .role-typing {
       color: var(--accent);
       font-weight: bold;
-      border-right: 2px solid var(--accent);
-      padding-right: 4px;
+      border-right: 4px solid var(--accent);
+      padding-right: 6px;
       animation: blink-caret 0.8s step-end infinite;
-      
-    }
+      display: inline-block;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 0.8s steps(2) infinite;
+  transform: translateY(5px);
+}
+
+    
     @keyframes blink-caret {
       0%, 100% { border-color: transparent }
       50% { border-color: var(--accent); }
     }
-   
     .hero-desc {
       color: #b3c6e0;
       margin-bottom: 18px;
@@ -1252,6 +1258,7 @@ nav.main-nav ul li:nth-child(5) { animation-delay: 1s; }
     font-size: 1rem;
   }
 }
+
 
 .role-typing {
   border-right: 2px solid orange;
