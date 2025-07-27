@@ -62,11 +62,11 @@
     </div>
 
     <!-- Intro Text + Buttons -->
-    <div class="hero-intro">
+    <div class="hero-intro" >
       <p class="hello">Hello, I'm</p>
       <h1 class="hero-name" data-aos="zoom-out" data-aos-delay="400">Arjun Kumar</h1>
-      <h2 class="hero-role">And I'm a <span class="role-typing"></span></h2>
-      <p class="hero-desc">
+      <h2 class="hero-role">And I'm a &nbsp;<span class="role-typing"></span></h2>
+      <p class="hero-desc" data-aos="fade-left" data-aos-delay="500">
         I create beautiful and functional web applications that make a difference. With a passion for coding and design, I strive to deliver exceptional user experiences.
         <br><br>Let's build something amazing together!
       </p>
@@ -316,12 +316,64 @@
   </div>
 
   <!-- Bottom Footer -->
-  <div class="footer-bottom">
+  <div class="footer-bottom" >
     <span>&copy; 2025 Design with Arjun <span class="footer-heart">❤</span> by arjunvision. All rights reserved.</span>
   </div>
 </footer>
 
   <div class="back-to-top" id="backToTop"> <i class="fa fa-arrow-up"></i>
+    <script>
+  const roles = ["Web Developer", "Problem Solver ", "Open Source Contributor", "Tech Enthusiast"];
+  const typingSpan = document.querySelector(".role-typing");
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentRole = roles[roleIndex];
+    if (isDeleting) {
+      typingSpan.textContent = currentRole.substring(0, charIndex--);
+    } else {
+      typingSpan.textContent = currentRole.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+      isDeleting = true;
+      setTimeout(type, 1000); // Wait before deleting
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(type, 300); // Wait before typing next
+    } else {
+      setTimeout(type, isDeleting ? 50 : 100); // Typing speed
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    type();
+  });
+
+   const hamburgerBtn = document.getElementById('hamburger-btn');
+const navUl = document.querySelector('.main-nav ul');
+hamburgerBtn.addEventListener('click', function() {
+  hamburgerBtn.classList.toggle('active');
+  navUl.classList.toggle('open');
+});
+// Optional: close menu on link click (mobile)
+navUl.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('active');
+    navUl.classList.remove('open');
+  });
+});
+
+function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+</script>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
