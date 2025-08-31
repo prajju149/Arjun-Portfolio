@@ -77,7 +77,7 @@
         <a href="https://github.com/prajju149"><img src="github-65-512.png" alt="GitHub"></a>
         <a href="https://www.instagram.com/arjun_m0368?igsh=eGE3YWM2Z3g4OHN1"><img src="instagram.png" alt="Instagram"></a>
         <a href="https://www.facebook.com/share/16t6ktBwCM/"><img src="fb.png" alt="Facebook"></a>
-        <a href="https://x.com/Arjun36017?t=I1AklURvKO0rhhH3R249_g&s=09"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://youtube.com/@creationhub54?si=_kK4FjZmNTvLzd72"><img src="yt1.png" alt="YouTube"></a>
         <a href="mailto:aksir648@gmail.com"><img src="mail.png" alt="Email"></a>
       </div>
 
@@ -89,6 +89,7 @@
     </div>
   </div>
 </header>
+
 
 
  <section class="about-section" id="about" data-aos="fade-up">
@@ -191,6 +192,15 @@
   </ul>
 </section>
 
+
+<section>
+    <h2 data-aos="zoom-in" data-aos-delay="200">What People Say </h2>
+    <p class="subtitle" data-aos="fade-right" data-aos-delay="200">Discover inspiration and insights through recent reviews from our students.</p>
+
+    <div class="scroll-container" id="testimonial-container" data-aos="fade-right" data-aos-delay="200"   ></div>
+</section>
+
+
 <section class="contact-section" id="contact Me" data-aos="fade-up">
   <!-- Left side profile section -->
   <div class="profile-left" data-aos="fade-right" data-aos-delay="100">
@@ -259,7 +269,6 @@
         <a href="https://github.com/prajju149"><img src="github-65-512.png" alt="GitHub"></a>
         <a href="https://www.instagram.com/arjun_m0368?igsh=eGE3YWM2Z3g4OHN1"><img src="instagram.png" alt="Instagram"></a>
         <a href="https://www.facebook.com/share/16t6ktBwCM/"><img src="fb.png" alt="Facebook"></a>
-        <a href="https://x.com/Arjun36017?t=I1AklURvKO0rhhH3R249_g&s=09"><img src="twitter.png" alt="Twitter"></a>
         <a href="mailto:aksir648@gmail.com"><img src="mail.png" alt="Email"></a>
       </div>
     </div>
@@ -371,6 +380,95 @@ navUl.querySelectorAll('a').forEach(link => {
 function toggleTheme() {
       document.body.classList.toggle('light-theme');
     }
+</script>
+
+<script>
+    // JSON Array of testimonials
+    const testimonials = [
+        {
+            name: "Chandrashekhar Sharnagat",
+            username: "@Chandrashekhar",
+            review: "Excellent teaching. I really enjoyed this course and the format it was presented in. In-depth concepts of Spring Boot & Microservices were explained clearly.",
+            gradient: "linear-gradient(45deg, #ff4ecd, #4be1ec)"
+        },
+        {
+            name: "Aritra Khatua",
+            username: "@Aritra",
+            review: "Nice course, lots of content is provided.",
+            gradient: "linear-gradient(45deg, #43cea2, #185a9d)"
+        },
+        {
+            name: "Vithal Nagappa Nivargi",
+            username: "@Vithal",
+            review: "Hi Sir, I completed this course with project, you have provided awesome content. Please bring a ReactJS frontend course from scratch.",
+            gradient: "linear-gradient(45deg, #f7971e, #ffd200)"
+        },
+        {
+            name: "Vikash Mishra",
+            username: "@Vikash",
+            review: "I learned a lot from this course. Concepts are in-depth and very clear. Thanks!",
+            gradient: "linear-gradient(45deg, #ff416c, #ff4b2b)"
+        },
+        {
+            name: "Afjal Karim Ansari",
+            username: "@Afjal",
+            review: "Trainer is very friendly with all of us. We could ask any doubts without hesitation, making the training very effective.",
+            gradient: "linear-gradient(45deg, #00b09b, #96c93d)"
+        },
+        {
+            name: "Rakesh Kawade",
+            username: "@Rakesh",
+            review: "Best Course 👌👌 जीको भी Spring Boot सीखना होगा दुरगेश सर से ही सिखे। आसान भाषा में पढ़ाई है सब चीज़ें बेहतरीन तरीके से।🔥",
+            gradient: "linear-gradient(45deg, #e96443, #904e95)"
+        }
+    ];
+
+    const container = document.getElementById("testimonial-container");
+
+    // Function to create testimonial cards
+    function createTestimonialCard(t) {
+        return `
+            <div class="testimonial">
+                <div class="profile">
+                    <div class="avatar" style="background:${t.gradient};"></div>
+                    <div>
+                        <div class="name">${t.name}</div>
+                        <div class="username">${t.username}</div>
+                    </div>
+                </div>
+                <p>${t.review}</p>
+            </div>
+        `;
+    }
+
+    // Duplicate testimonials for seamless infinite scroll
+    let testimonialHTML = "";
+    for (let i = 0; i < 2; i++) {
+        testimonials.forEach(t => {
+            testimonialHTML += createTestimonialCard(t);
+        });
+    }
+    container.innerHTML = testimonialHTML;
+
+    // Auto scroll effect
+    let scrollSpeed = 1;
+    let scrollInterval = setInterval(() => {
+        container.scrollLeft += scrollSpeed;
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+            container.scrollLeft = 0;
+        }
+    }, 20);
+
+    // Pause on hover
+    container.addEventListener("mouseenter", () => clearInterval(scrollInterval));
+    container.addEventListener("mouseleave", () => {
+        scrollInterval = setInterval(() => {
+            container.scrollLeft += scrollSpeed;
+            if (container.scrollLeft >= container.scrollWidth / 2) {
+                container.scrollLeft = 0;
+            }
+        }, 20);
+    });
 </script>
 
 
