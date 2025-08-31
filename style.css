@@ -649,6 +649,79 @@ nav.main-nav ul li:nth-child(5) { animation-delay: 1s; }
     padding: 40px 8px;
   }
 }
+
+section {
+        padding: 40px 20px;
+        text-align: center;
+        background: #0d0e10;
+        row-gap: 20px;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: #b8c4ff;
+        margin-bottom: 5px;
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+        
+    }
+
+    p.subtitle {
+        color: #ccc;
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .scroll-container {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .testimonial {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 12px;
+        flex: 0 0 auto;
+        width: 300px;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: linear-gradient(45deg, #ff4ecd, #4be1ec);
+    }
+
+    .name {
+        font-weight: bold;
+    }
+
+    .username {
+        font-size: 0.85rem;
+        color: #aaa;
+    }
+    @keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1.2s infinite;
+}
+
+
 /* ...existing code... */
 
     .contact-section {
